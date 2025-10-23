@@ -70,9 +70,9 @@ export default function Home() {
               <a href="#" className="text-slate-700 hover:text-blue-600 transition-colors dark:text-slate-300 dark:hover:text-blue-400">About</a>
             </div>
             <div className="flex gap-4 items-center">
-              <button className="text-2xl hover:scale-110 transition-transform">🔍</button>
-              <button className="text-2xl hover:scale-110 transition-transform">🛒</button>
-              <button className="text-2xl hover:scale-110 transition-transform">👤</button>
+              <button aria-label="Search" className="text-2xl hover:scale-110 transition-transform">🔍</button>
+              <button aria-label="Shopping cart" className="text-2xl hover:scale-110 transition-transform">🛒</button>
+              <button aria-label="User account" className="text-2xl hover:scale-110 transition-transform">👤</button>
             </div>
           </div>
         </div>
@@ -154,7 +154,10 @@ export default function Home() {
                   <span className="text-2xl font-bold text-slate-900 dark:text-white">
                     {product.price}
                   </span>
-                  <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-semibold">
+                  <button 
+                    aria-label={`Add ${product.name} to cart`}
+                    className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-semibold"
+                  >
                     Add to Cart
                   </button>
                 </div>
@@ -209,10 +212,10 @@ export default function Home() {
             <div>
               <h3 className="font-semibold text-lg mb-4">Connect</h3>
               <div className="flex gap-4 text-2xl">
-                <a href="#" className="hover:scale-110 transition-transform">📘</a>
-                <a href="#" className="hover:scale-110 transition-transform">📷</a>
-                <a href="#" className="hover:scale-110 transition-transform">🐦</a>
-                <a href="#" className="hover:scale-110 transition-transform">💼</a>
+                <a href="#" aria-label="Facebook" className="hover:scale-110 transition-transform">📘</a>
+                <a href="#" aria-label="Instagram" className="hover:scale-110 transition-transform">📷</a>
+                <a href="#" aria-label="Twitter" className="hover:scale-110 transition-transform">🐦</a>
+                <a href="#" aria-label="LinkedIn" className="hover:scale-110 transition-transform">💼</a>
               </div>
             </div>
           </div>
